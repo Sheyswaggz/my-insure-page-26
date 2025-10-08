@@ -1,0 +1,125 @@
+# .prettierignore
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build artifacts
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Minified files
+*.min.js
+*.min.css
+*.min.html
+
+# Vendor files
+vendor/
+vendors/
+third-party/
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Lock files
+*.lock
+
+# Compiled output
+*.bundle.js
+*.chunk.js
+
+# Documentation builds
+docs/build/
+_site/
+
+# Environment files (may contain sensitive data)
+.env
+.env.local
+.env.*.local
+
+# Public assets that shouldn't be formatted
+public/vendor/
+public/lib/
+
+# Generated files
+generated/
+auto-generated/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.svg
+*.webp
+
+# Font files
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.otf
+
+# Video files
+*.mp4
+*.webm
+*.ogg
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+
+# Data files
+*.csv
+*.xml
+*.sql
+*.db
+*.sqlite
+
+# Markdown files with special formatting (if needed)
+CHANGELOG.md
