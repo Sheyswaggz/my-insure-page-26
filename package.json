@@ -1,0 +1,59 @@
+{
+  "name": "my-insure-page-26",
+  "version": "1.0.0",
+  "description": "Insurance landing page with modern design and responsive layout",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "npx serve . -p 3000 --no-clipboard --no-port-switching",
+    "build": "node scripts/build.js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "validate": "html-validator --file=index.html --verbose --format=text",
+    "validate:dist": "html-validator --file=dist/index.html --verbose --format=text",
+    "prebuild": "node -e \"const fs=require('fs');if(fs.existsSync('dist')){fs.rmSync('dist',{recursive:true,force:true});}\"",
+    "postbuild": "npm run validate:dist",
+    "audit:security": "npm audit --audit-level=moderate",
+    "clean": "node -e \"const fs=require('fs');['dist','node_modules'].forEach(d=>{if(fs.existsSync(d)){fs.rmSync(d,{recursive:true,force:true});}})\"",
+    "preinstall": "node -e \"const v=process.version.match(/^v(\\d+)\\./)[1];if(parseInt(v)<18){console.error('Node.js >=18.0.0 required');process.exit(1);}\"",
+    "serve:dist": "npx serve dist -p 8080 --no-clipboard",
+    "check:all": "npm run format:check && npm run validate && npm run audit:security"
+  },
+  "keywords": [
+    "insurance",
+    "landing-page",
+    "static-site",
+    "responsive"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "serve": "^14.2.1",
+    "html-validator-cli": "^8.0.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
